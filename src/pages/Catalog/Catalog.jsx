@@ -1,7 +1,9 @@
+import { ListAdverts } from "components/ListAdverts/ListAdverts";
+
 const CatalogPage = () => {
     return(
         <div>
-            <h1>CatalogPage</h1>
+            <ListAdverts />
         </div>
     )
 }

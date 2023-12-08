@@ -1,7 +1,7 @@
 import { Outlet } from "react-router-dom";
 import { Suspense } from "react";
 import Header from "components/Header/Header";
-import { Container } from "./Layout.styled";
+import { Container, Content } from "./Layout.styled";
 
 const Layout = () => {
     return(
@@ -9,9 +9,11 @@ const Layout = () => {
         <Container>
             <Header />
         </Container>
+        <Content>
         <Suspense>
             <Outlet />
         </Suspense>
+        </Content>
         </>
     )
 }
