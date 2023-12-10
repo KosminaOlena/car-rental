@@ -10,6 +10,7 @@ export const Button = styled.button`
 height: 44px;
 width: 100%;
 font-size: 13px;
+font-weight: 600;
 background-color: #3470FF;
 color: #fff;
 border: none;
@@ -36,5 +37,4 @@ color: #3470FF;`
 
 export const Desc = styled.p`
 font-size: 12px;
-font-weight: 1.5;
 color: rgba(18, 20, 23, 0.5)`

@@ -18,16 +18,7 @@ export const ListAdverts = () => {
         <List>
             {visibleArray.map(advert => (<ItemListAdverts
             key={advert.id}
-            img={advert.img}
-            make={advert.make}
-            model={advert.model}
-            year={advert.year}
-            price={advert.rentalPrice}
-            address={advert.address}
-            company={advert.rentalCompany}
-            type={advert.type}
-            mileage={advert.mileage}
-            functionalities={advert.functionalities}/>))}   
+            advert={advert}/>))}   
         </List>
     )
 }

@@ -10,6 +10,4 @@ padding-left: 8px;
 padding-right: 8px;
 width: 100%;
 background-color: #fff;
-font-weight: 500;
-font-size: 20px;
 color: rgb(1, 180, 30);`
