@@ -14,18 +14,18 @@ export const Overlay = styled.div`
 
 export const ModalWindow = styled.div`
   width: 541px;
-  height: 752px;
   border-radius: 24px;
   padding: 40px;
   background-color: #FFFFFF;`
 
 export const Image = styled.img`
-height: 248px;
+width: 100%;
 border-radius: 14px;
 object-fit: cover;`
 
 export const Header = styled.h2`
 font-size: 18px;
+margin-top: 14px;
 line-height: 1.33;
 font-weight: 500;
 color: #121417;`
@@ -33,13 +33,18 @@ color: #121417;`
 export const Span = styled.span`
 color: #3470FF;`
 
+export const SpanBold = styled.span`
+color: #3470FF;
+font-weight: 600;`
+
 export const Desc = styled.p`
 font-size: 12px;
 line-height: 1.5;
+margin-top: 8px;
 color: rgba(18, 20, 23, 0.5);`
 
 export const Text = styled.h3`
-margin-top: 24px;
+margin-top: 14px;
 font-size: 14px;
 line-height: 1.42;
 color: #121417;`
@@ -59,6 +64,7 @@ font-weight: 600px;
 text-align: center;
 text-decoration: none;
 padding: 10px;
+margin-top: 24px;
 background-color: #3470FF;
 color: #fff;
 border: none;
@@ -67,3 +73,14 @@ cursor: pointer;
 &:hover{
     background-color: #0B44CD;
 }`
+
+export const List = styled.ul`
+display: flex;
+gap: 8px;
+margin-top:8px;
+flex-wrap: wrap;
+font-size: 12px;
+color: #363535;`
+
+export const Item = styled.li`
+padding: 7px 14px;`

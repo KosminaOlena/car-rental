@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { Overlay, ModalWindow, Image, Header, Span, Desc, Text, Title, Button } from "./Modal.styled";
+import { Overlay, ModalWindow, Image, Header, Span, SpanBold, Desc, Text, Title, Button, List, Item } from "./Modal.styled";
 
 const Modal = ({advert, onClose}) => {
     useEffect(()=>{
@@ -21,6 +21,10 @@ const Modal = ({advert, onClose}) => {
     const shortAddress = address.split(',').slice(-2).join(' | ');
     const preparedAccessories = accessories.map(accessory => `${accessory}`).join(' | ');
     const preparedFunctionalities = functionalities.map(functionality => `${functionality}`).join(' | ');
+    const preparedRentalConditions = rentalConditions.split('\n');
+    const preparedAge = preparedRentalConditions[0].split(':');
+    const preparedMileage = String(mileage).slice(0,1)+','+String(mileage).slice(1);
+
 
     return(
         <Overlay onClick={handleOverlayClick}>
@@ -34,6 +38,15 @@ const Modal = ({advert, onClose}) => {
                 <Desc>{preparedAccessories}</Desc>
                 <Desc>{preparedFunctionalities}</Desc>
                 <Title>Rental Conditions:</Title>
+                <List>
+                    <Item>Minimum age: <SpanBold>{preparedAge[1]}</SpanBold></Item>
+                    <Item>{preparedRentalConditions[1]}</Item>
+                </List>
+                <List>
+                    <Item>{preparedRentalConditions[2]}</Item>
+                    <Item>Mileage: <SpanBold>{preparedMileage}</SpanBold></Item>
+                    <Item>Price: <SpanBold>{rentalPrice.slice(1)+'$'}</SpanBold></Item>
+                </List>
                 <Button href="+380730000000">Rental car</Button>
 
             </ModalWindow>
